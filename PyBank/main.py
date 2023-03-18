@@ -7,20 +7,24 @@ csvpath = os.path.join('Resources', 'budget_data.csv')
 
 #define variables
 months = []
+net_loss_list = []
 
 total_months = 0
-total_profit = 0
+net_loss = 0
+current_loss = 0
+previous_loss = 0
 
-#count the rows to find the total months
+#open and read csv
 with open(csvpath, encoding='utf') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
 #read the header first
     csv_header = next(csvfile)
-
-    # Loop through looking for the video
+    first_row = next(csvreader)
+    
+    # Loop through each row
     for row in csvreader:
         total_months +=1
-
+            
       #add each month to the months count  
         months.append(row[0])
 
