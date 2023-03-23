@@ -36,7 +36,7 @@ winning_vote_count = dict_candidates[winner]
 
 #find the percentage of votes per candidate
 for candidate, vote_count in dict_candidates.items():
-    percentage = round((vote_count / total_votes) * 100, 2)
+    percentage = round((vote_count / total_votes) * 100, 3)
     dict_percentages[candidate] = f"{percentage}%"
 
 print ("Election Results")
@@ -45,3 +45,17 @@ print ("Total Votes: ", total_votes)
 print ("Percentage of Votes by Candidate: ", dict_percentages)
 print ("Total Votes Per Candidate: ", dict_candidates)
 print (f"The winner is {winner} with {winning_vote_count} votes.")
+
+#Exporting to .txt file
+with open("electionresults.txt", "w") as f:
+#line3 = str(f"Total Months: {str(total_months)}")
+    line1 = ("Election Results")
+    line2 = ("-------------------------")
+    line3 = str(f"Total Votes: {str(total_votes)}")
+    line4 = str(f"Percentage of Votes by Candidate: {str(dict_percentages)}")
+    line5 = str(f"Total Votes Per Candidate: {str(dict_candidates)}")
+    line6 = str(f"The winner is {str(winner)} with {str(winning_vote_count)} votes.")
+    f.write('{}\n{}\n{}\n{}\n{}\n{}\n'.format(line1,line2,line3,line4,line5,line6))
+
+    #Close the file
+    f.close()
