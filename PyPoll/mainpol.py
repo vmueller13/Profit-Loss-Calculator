@@ -5,14 +5,11 @@ import csv
 #Creating an object out of the CSV file
 csvpath = os.path.join('Resources', 'election_data.csv')
 
-#create the list
+#create the lists and dictionaries
 names = set()
 dict_candidates = {}
 candidate_list = []
-
-#set the starting variables to 0
-total_votes = 0
-winner = ""
+dict_percentages = {}
 
 #Opening and reading the CSV file
 with open(csvpath) as csvfile:
@@ -23,7 +20,6 @@ with open(csvpath) as csvfile:
 
     for row in csvreader:
         # Keeping track of the votes
-        total_votes += 1
         candidate = row[2]
         #add the value from the candidate column to the set
         names.add(row[2])
@@ -31,10 +27,21 @@ with open(csvpath) as csvfile:
             candidate_list.append(candidate)
             dict_candidates[candidate] = 0
         dict_candidates[candidate]+=1
+#total the votes
+total_votes = sum(dict_candidates.values())
+
+#find the winner of the election
 winner = max(dict_candidates, key=dict_candidates.get)
 winning_vote_count = dict_candidates[winner]
 
-print ("Total Votes: ", int(total_votes))
-print ("Candidates: ", str(names))
-print (dict_candidates)
+#find the percentage of votes per candidate
+for candidate, vote_count in dict_candidates.items():
+    percentage = round((vote_count / total_votes) * 100, 2)
+    dict_percentages[candidate] = f"{percentage}%"
+
+print ("Election Results")
+print ("-------------------------")
+print ("Total Votes: ", total_votes)
+print ("Percentage of Votes by Candidate: ", dict_percentages)
+print ("Total Votes Per Candidate: ", dict_candidates)
 print (f"The winner is {winner} with {winning_vote_count} votes.")
