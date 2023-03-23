@@ -46,9 +46,10 @@ print ("Percentage of Votes by Candidate: ", dict_percentages)
 print ("Total Votes Per Candidate: ", dict_candidates)
 print (f"The winner is {winner} with {winning_vote_count} votes.")
 
-#Exporting to .txt file
+#Exporting to .txt file, how to get into the analysis folder?
+file_path = os.path.join("analysis", "electionresults.txt")
+
 with open("electionresults.txt", "w") as f:
-#line3 = str(f"Total Months: {str(total_months)}")
     line1 = ("Election Results")
     line2 = ("-------------------------")
     line3 = str(f"Total Votes: {str(total_votes)}")
