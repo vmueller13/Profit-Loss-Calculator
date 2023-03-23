@@ -30,12 +30,11 @@ with open(csvpath) as csvfile:
         if candidate not in candidate_list:
             candidate_list.append(candidate)
             dict_candidates[candidate] = 0
-        candidate
-for value in names:
-    percentage = round(float(names[candidate])/float(total_votes),2)
-for key in votesByCandidate.items():
-    percentage_of_votes.append(v/total_votes)
+        dict_candidates[candidate]+=1
+winner = max(dict_candidates, key=dict_candidates.get)
+winning_vote_count = dict_candidates[winner]
 
 print ("Total Votes: ", int(total_votes))
 print ("Candidates: ", str(names))
-print ("Percentage of Votes: ", int(percentage_of_votes))
+print (dict_candidates)
+print (f"The winner is {winner} with {winning_vote_count} votes.")
