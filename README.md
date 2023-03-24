@@ -13,5 +13,8 @@ First, I created the names as a set, candidates as a list and percentages and ca
 
 After that, I totaled the votes and found the winner of the election by looking for the max value in the candidate dictionary. I converted the number into a percentage and added the % symbol on line 40. From there, I was able to print the results to the terminal and write the output to a new file titled 'electionresults.txt'.
 
+Struggles
+I struggled with the syntax of the dictionaries and how to extract the key and value that I wanted. I also consistently forget to start my code by setting the variables to 0 or an empty list etc. Lastly, I could not figure out how to get the analysis txt file to be located in the correct folder by using the code. Eventually, I just moved the files into the correct folder, but that move is not reflected in my code.
+
 Sources:
-For this assignment, I worked closely with classmates Saroja Shrestha and Taniya Talukdar. I referenced a Git Hub page for the format of the write portion of both projects and the if statement on line 26 of PyPoll. (I have since lost the direct link, apologies.) Additionally, I used the websites Slack Overflow and ChatGBT to check my code syntax and solve some of the problems that I ran into with the dictionary.
+For this assignment, I worked closely with classmates Saroja Shrestha and Taniya Talukdar. I referenced a Git Hub page for the format of the write portion of both projects and the if statement on line 26 of PyPoll. (I have since lost the direct link, apologies.) Additionally, I used various Slack Overflow articlesand pandas.pydata.org to check my code syntax and solve some of the problems that I ran into with the dictionary.
