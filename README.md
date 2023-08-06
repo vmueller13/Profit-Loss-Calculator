@@ -1,4 +1,4 @@
-# Module 3: Python Challenge
+# Module 3 Challenge: Python
 <ins>Project Overview</ins>
 
 This first deliverable of this project, *PyBank*, focuses on analyzing the financial records of a company using Python to calculate each of the following values:
