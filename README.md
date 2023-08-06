@@ -1,5 +1,7 @@
 # Module 3 Challenge: Python
 <ins>Project Overview</ins>
+-----
+
 
 This first deliverable of this project, *PyBank*, focuses on analyzing the financial records of a company using Python to calculate each of the following values:
 * The total number of months included in the dataset
@@ -19,6 +21,8 @@ The second ask of this challenge, *PyPoll*, helps a small, rural town modernize 
 Both of these scripts print the analysis to the terminal and export a text file with the results.
 
 <ins>Processes and Technologies</ins>
+-----
+
 
 *PyBank*
 First, I tracked the following variables: total months, net amount of profit/losses, greatest increase in profit (date and amount) and greatest decrease in profit (date and amount) by creating dictionaries for the months and the profits and filling them through a for loop that calculate the change, adds it to list of changes and ultimately calculates the net change over time. The outputs display in the terminal as well as in the 'financialanalysis.txt' file.
@@ -32,6 +36,9 @@ First, I created the names as a set, candidates as a list and percentages and ca
 ![PyPoll Terminal Output](Images/PyPoll.png)
 
 <ins>Challenges</ins>
+-----
+
+
 I struggled with the syntax of the dictionaries and how to extract the key and value that I wanted. I also consistently forget to start my code by setting the variables to 0 or an empty list etc. Lastly, I could not figure out how to get the analysis txt file to be located in the correct folder by using the code. Eventually, I just moved the files into the correct folder, but that move is not reflected in my code.
 
 Sources:
