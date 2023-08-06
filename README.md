@@ -1,7 +1,7 @@
 # Module 3: Python Challenge
 <ins>Project Overview</ins>
 
-This first deliverable of this project, *PyBank*, focuses on analyzing the financial records of a company using Python to caluclate each of the following values:
+This first deliverable of this project, *PyBank*, focuses on analyzing the financial records of a company using Python to calculate each of the following values:
 * The total number of months included in the dataset
 * The net total amount of "Profit/Losses" over the entire period
 * The changes in "Profit/Losses" over the entire period, and then the average of those changes
