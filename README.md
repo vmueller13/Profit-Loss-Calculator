@@ -1,19 +1,37 @@
-# python_challenge
-PyBank
+# Module 3: Python Challenge
+<ins>Project Overview</ins>
 
+This first deliverable of this project, *PyBank*, focuses on analyzing the financial records of a company using Python to caluclate each of the following values:
+* The total number of months included in the dataset
+* The net total amount of "Profit/Losses" over the entire period
+* The changes in "Profit/Losses" over the entire period, and then the average of those changes
+* The greatest increase in profits (date and amount) over the entire period
+* The greatest decrease in profits (date and amount) over the entire period
 
-The first thing that I did was track all the variables that were being asked for in the directions: total months, net amount of profit/losses, greatest increase in profit (date and amount) and greatest decrease in profit (date and amount). I also created two dictionaries for the months adn the profits.
+The second ask of this challenge, *PyPoll*, helps a small, rural town modernize its vote-counting process by analyzing the votes and calculates each of the following values:
 
-Then, I opened the files and skipped the first header row. I set up the variables so that I could find each of the values I was looking for the analysis. For each row in the file, I appended it to the months dictionary and used that for the Total Months count. In the same for loop, it read through and compared each new value to the previous value and added each difference (change) to the profits dictionary. From there, it was easy to find the maximum profit and minimum profit by using max and min. Lastly, I calculated the average change by averaging all of the values in the profits dictionary together. The outputs display in the terminal as well as in the 'financialanalysis.txt' file.
+* The total number of votes cast
+* A complete list of candidates who received votes
+* The percentage of votes each candidate won
+* The total number of votes each candidate won
+* The winner of the election based on popular vote
 
+Both of these scripts print the analysis to the terminal and export a text file with the results.
 
-PyPoll
+<ins>Processes and Technologies</ins>
 
-First, I created the names as a set, candidates as a list and percentages and candidates as a dictionary. Then I opened the csv file and kept track of the votes by reading through the rows and adding each candidate to the list. If the candidate wasn't already on the list, then the name was added by the if function on line 26.
+*PyBank*
+First, I tracked the following variables: total months, net amount of profit/losses, greatest increase in profit (date and amount) and greatest decrease in profit (date and amount) by creating dictionaries for the months and the profits and filling them through a for loop that calculate the change, adds it to list of changes and ultimately calculates the net change over time. The outputs display in the terminal as well as in the 'financialanalysis.txt' file.
 
-After that, I totaled the votes and found the winner of the election by looking for the max value in the candidate dictionary. I converted the number into a percentage and added the % symbol on line 40. From there, I was able to print the results to the terminal and write the output to a new file titled 'electionresults.txt'.
+![PyBank Terminal Output](Images/PyBank.png)
 
-Struggles
+*PyPoll*
+
+First, I created the names as a set, candidates as a list and percentages and candidates as a dictionary. Then I opened the csv file and read through the rows using a for loop and added each candidate to the list. If the candidate wasn't already on the list, then the name was added by the if function on line 26. After that, I totaled the votes and found the winner of the election by looking for the max value in the candidate dictionary. I converted the number into a percentage and added the % symbol on line 40. From there, I was able to print the results to the terminal and write the output to a new file titled 'electionresults.txt'.
+
+![PyPoll Terminal Output](Images/PyPoll.png)
+
+<ins>Challenges</ins>
 I struggled with the syntax of the dictionaries and how to extract the key and value that I wanted. I also consistently forget to start my code by setting the variables to 0 or an empty list etc. Lastly, I could not figure out how to get the analysis txt file to be located in the correct folder by using the code. Eventually, I just moved the files into the correct folder, but that move is not reflected in my code.
 
 Sources:
